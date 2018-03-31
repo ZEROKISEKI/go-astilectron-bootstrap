@@ -21,7 +21,7 @@ type MessageIn struct {
 }
 
 // handleMessages handles messages
-func handleMessages(w *astilectron.Window, messageHandler MessageHandler) astilectron.ListenerMessage {
+func handleMessages(a *astilectron.Astilectron, w *astilectron.Window, messageHandler MessageHandler) astilectron.ListenerMessage {
 	return func(m *astilectron.EventMessage) (v interface{}) {
 		// Unmarshal message
 		var i MessageIn
