@@ -33,7 +33,7 @@ func handleMessages(a *astilectron.Astilectron, w *astilectron.Window, messageHa
 
 		// Handle message
 		var p interface{}
-		if p, err = messageHandler(w, i); err != nil {
+		if p, err = messageHandler(a, w, i); err != nil {
 			astilog.Error(errors.Wrapf(err, "handling message %+v failed", i))
 		}
 
